@@ -124,6 +124,9 @@ public:
   static LLVMType getFunctionTy(LLVMType result, bool isVarArg) {
     return getFunctionTy(result, llvm::None, isVarArg);
   }
+
+  static LLVMType getOpaqueStructTy(LLVMDialect *dialect);
+
   static LLVMType getStructTy(LLVMDialect *dialect, ArrayRef<LLVMType> elements,
                               bool isPacked = false);
   static LLVMType getStructTy(LLVMDialect *dialect, bool isPacked = false) {
